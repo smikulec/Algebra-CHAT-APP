@@ -13,7 +13,6 @@ This chat application is the final project for Algebra's Frontend developer cour
 - vanillaJS
 - Node.js
 - Webpack
-- Netlify
 
 ## Features
 
@@ -25,16 +24,10 @@ This chat application is the final project for Algebra's Frontend developer cour
 
 ## Setup
 
-1. This application uses a secret key (Channel ID) to connect to Scaledrone that is provided by running netlify serverless functions. However, you can provide it manually in the main script, just follow the steps written there.
+1. This application uses a secret key (Channel ID) to connect to Scaledrone, you should provide it manually by creating and .env file (like in .env.example file).
 2. `npm install` - Install all the dependencies listed in package.json
-3. `npm run build`- Compile .scss to .css files and build application using Webpack
-4. `npm start`- Serve a development server that provides live reloading
-
-### Other scripts
-
-- `npm run compileSass` - Compile .scss to .css files while watching for changes
-- `npm run build-js` - Build application using Webpack
-- `npm run dev-js` - Build application using Webpack while watching the files and recompiling with every change
+3. `npm start`- Serve a development server that provides live reloading, build application using webpack in development mode and compiles scss to css files while watching for changes
+4. `npm build`- Build applicaton using Webpack in production mode and compiles scss to css 
 
 ## License
 
