@@ -1,0 +1,23 @@
+.chat-container {
+  width: $chat-container-width;
+  overflow: hidden;
+}
+
+.chat-box-container {
+  height: $chat-container-height;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(180deg);
+  direction: rtl;
+  border-radius: $primary-border-radius;
+  background-color: $primary-background-color;
+}
+
+.chat-box {
+  transform: rotate(180deg);
+  direction: ltr;
+}
+
+.chat-box:last-child {
+  padding-bottom: 10px;
+}

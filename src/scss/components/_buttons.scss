@@ -1,0 +1,21 @@
+.emoji-button {
+  background: none;
+  border: none;
+  opacity: 0.5;
+  border-radius: $secondary-border-radius;
+}
+
+.send-button {
+  width: 15%;
+  height: $input-container-height;
+  border-radius: $primary-border-radius;
+  border: none;
+  background-color: $primary-message-text-bg-color;
+  font-family: $primary-font;
+  font-size: $secondary-font-size;
+}
+
+.send-button:hover,
+.emoji-button:hover {
+  cursor: pointer;
+}

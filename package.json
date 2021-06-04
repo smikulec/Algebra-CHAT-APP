@@ -1,0 +1,35 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Chat application using Scaledrone realtime messaging service",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "concurrently \"webpack serve --config webpack.config.js --mode development\" \"webpack --config webpack.config.js --mode development --watch\" \"sass src/scss/main.scss dist/main.css --watch\" ",
+    "build": "concurrently \"webpack --config webpack.config.js --mode production\" \"sass src/scss/main.scss dist/main.css\" "
+  },
+  "keywords": [
+    "chat-app",
+    "Scaledrone"
+  ],
+  "author": "Sonja Mikulec",
+  "license": "ISC",
+  "dependencies": {
+    "@joeattardi/emoji-button": "^4.6.0",
+    "unique-names-generator": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.0",
+    "dotenv-webpack": "^7.0.2",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.1",
+    "html-loader": "^2.1.2",
+    "sass": "^1.32.12",
+    "webpack": "^5.25.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

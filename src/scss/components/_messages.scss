@@ -1,0 +1,41 @@
+.message-own {
+  @include flexbox(column, wrap, initial, flex-end);
+  margin-left: 15px;
+  @include slideFromRight;
+  animation: slideFromRight 0.3s ease-in-out both;
+}
+.message-others {
+  @include flexbox(column, wrap, initial, flex-start);
+  margin-right: 15px;
+  @include slideFromLeft;
+  animation: slideFromLeft 0.3s ease-in-out both;
+}
+
+.message-own .message-text {
+  background-color: $primary-message-text-bg-color;
+  color: $primary-message-text-color;
+}
+.message-others .message-text {
+  background-color: $secondary-message-text-bg-color;
+  color: $secondary-message-text-color;
+}
+.message-username {
+  color: $primary-username-color;
+  margin: 5px 0px;
+  font-size: $secondary-font-size;
+}
+.message-text {
+  border: none;
+  border-radius: $tertiary-border-radius;
+  padding: 5px;
+  font-size: $primary-font-size;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+.message-sent-time {
+  display: block;
+  text-align: right;
+  color: $primary-time-color;
+  font-size: $tertiary-font-size;
+}

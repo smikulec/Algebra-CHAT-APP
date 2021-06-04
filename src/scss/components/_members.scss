@@ -1,0 +1,48 @@
+@media screen and (min-width: 600px) {
+  .members-container {
+    font-size: $primary-font-size;
+    max-height: 593px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .members-container {
+    font-size: $secondary-font-size;
+    max-height: 250px;
+    margin: 15px 0px;
+  }
+}
+
+.members-container {
+  width: 309px;
+  margin-left: 10px;
+  border-radius: $primary-border-radius;
+  padding: 5px;
+  background-color: $members-container-bg-color;
+  text-align: justify;
+  overflow-y: auto;
+}
+
+.members-title {
+  display: block;
+  text-align: center;
+  border-bottom: 0.5px solid $members-list-color;
+  padding: 10px;
+}
+
+.members-list {
+  list-style: none;
+  padding-left: 5%;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid $members-list-color;
+}
+
+.notification-list {
+  list-style: none;
+  padding-left: 5%;
+}
+
+.notification-list li,
+.members-list li {
+  margin-bottom: 6px;
+}

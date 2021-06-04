@@ -1,0 +1,15 @@
+@media screen and (min-width: 600px) {
+  .main-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .main-title {
+    font-size: 1.5rem;
+  }
+}
+
+.main-title {
+  color: $primary-title-color;
+}

@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+  @include body-background;
+}
+
+@media screen and (min-width: 1024px) {
+  .flex-container {
+    @include flexbox(row, wrap, center);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .flex-container {
+    @include flexbox(row, nowrap, center);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .flex-container {
+    @include flexbox(row, wrap, center);
+  }
+}

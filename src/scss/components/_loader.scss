@@ -1,0 +1,38 @@
+/*! ADJUSTED FROM - https://projects.lukehaas.me/css-loaders/ */
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  @include dotLoader;
+  animation-fill-mode: both;
+  animation: dotLoader 1.8s infinite ease-in-out;
+}
+
+.loader {
+  color: $loader-color;
+  font-size: $tertiary-font-size;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 45px;
+  position: relative;
+  text-indent: -9999em;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -3em;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 3.5em;
+}

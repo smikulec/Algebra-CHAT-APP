@@ -1,0 +1,33 @@
+// POP UP MODAL FOR ERROR NOTIFICATIONS
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background-color: $secondary-modal-bg-color;
+}
+
+.modal-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-description {
+  position: absolute;
+  top: 20%;
+  background-color: $primary-modal-bg-color;
+  padding: 20px;
+  border-radius: $tertiary-border-radius;
+  margin: 25px;
+}
+
+.modal-description h1 {
+  color: black;
+  font-size: 2em;
+  text-align: center;
+  margin: 3px;
+}

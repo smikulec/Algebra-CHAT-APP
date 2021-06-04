@@ -1,0 +1,4 @@
+.message-form {
+  @include flexbox(row, wrap, space-between);
+  margin-top: 10px;
+}
