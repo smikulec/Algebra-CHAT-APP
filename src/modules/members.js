@@ -31,13 +31,12 @@ function createMembersList(member, action) {
 function showMembersList(username) {
   const membersListElement = document.querySelector(".js-members-list");
   const numberOfMembers = document.querySelector(".js-members-title");
-
   membersListElement.innerHTML = "";
   numberOfMembers.innerText = `Active users (${membersList.length})`;
 
   for (let i = 0; i < membersList.length; i++) {
     const listItem = document.createElement("li");
-    if (membersList[i].id === username) {
+    if (membersList[i].clientData === username) {
       listItem.innerText = `${membersList[i].clientData} (you)`;
       listItem.style.fontWeight = "bold";
     } else {

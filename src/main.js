@@ -7,6 +7,8 @@ const drone = new Scaledrone(keyID, {
   data: createRandomNickname(),
 });
 
+const allocatedUsername = drone.args[1].data;
+
 const room = drone.subscribe("observable-Algebra");
 
 drone.on("open", (error) => {
@@ -27,8 +29,8 @@ room.on("open", (error) => {
 
 scaledrone.onMessages.sendMessages(drone);
 
-scaledrone.onMessages.receiveMessages(room);
+scaledrone.onMessages.receiveMessages(room, allocatedUsername);
 
-scaledrone.onMembers.trackMembers(room);
+scaledrone.onMembers.trackMembers(room, allocatedUsername);
 
 scaledrone.onError.errorHandling(drone);

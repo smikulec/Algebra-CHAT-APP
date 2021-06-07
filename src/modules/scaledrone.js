@@ -13,21 +13,21 @@ function sendMessages(drone) {
   drone.on("open", () => listenToSendMessageEvents(drone));
 }
 
-function receiveMessages(room) {
+function receiveMessages(room, username) {
   room.on("message", (message) => {
-    showMessage(message, room.scaledrone.clientId);
+    showMessage(message, username);
   });
 }
 
-function trackMembers(room) {
-  room.on("members", (members) => membersListed(members, room.scaledrone.clientId));
+function trackMembers(room, username) {
+  room.on("members", (members) => membersListed(members, username));
 
   room.on("member_join", (member) =>
-    memberUpdate(member, room.scaledrone.clientId, actionEnums.ADD)
+    memberUpdate(member, username, actionEnums.ADD)
   );
 
   room.on("member_leave", (member) =>
-    memberUpdate(member, room.scaledrone.clientId, actionEnums.REMOVE)
+    memberUpdate(member, username, actionEnums.REMOVE)
   );
 }
 
@@ -36,14 +36,13 @@ function errorHandling(drone) {
 
   drone.on(errorEnums.CLOSE, () => showErrorNotification(errorEnums.CLOSE));
 
-  drone.on(errorEnums.DISCONNECT, () =>
+  drone.on(errorEnums.DISCONNECT, () => {
     showErrorNotification(errorEnums.DISCONNECT)
-  );
+  });
 
   drone.on(errorEnums.RECONNECT, () => {
-    showErrorNotification(actionEnums.RECONNECT);
-
-    createMembersList("null", actionEnums.RECONNECT);
+    showErrorNotification(errorEnums.RECONNECT);
+    createMembersList("null", errorEnums.RECONNECT);
   });
 }
 

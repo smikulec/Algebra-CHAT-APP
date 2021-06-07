@@ -37,7 +37,7 @@ function showMessage(message, username) {
     },
   });
 
-  if (member.id === username) {
+  if (member.clientData === username) {
     divMessage.className = "message-own";
   } else {
     divMessage.className = "message-others";

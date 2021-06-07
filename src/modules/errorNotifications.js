@@ -4,12 +4,14 @@ import errorTemplate from "../templates/html/errorTemplate.html";
 import reconnectTemplate from "../templates/html/reconnectTemplate.html";
 import errorEnums from "../enums/errorEnums";
 
+const popUpModal = document.createElement("div");
+document.body.appendChild(popUpModal);
+popUpModal.className = "modal";
 const modalTemplate = require("../templates/handlebars/modalTemplate.handlebars");
 
-const popUpModal = document.querySelector(".modal");
-
 function showErrorNotification(input) {
-  if (input === errorEnums.ERROR) {
+  
+  if (input === errorEnums.RECONNECT) {
     setTimeout(() => {
       popUpModal.style.display = "none";
     }, 3000);
@@ -32,6 +34,7 @@ function showErrorNotification(input) {
       errorMessage: reconnectTemplate,
     });
   }
+
 }
 
 export { showErrorNotification };
