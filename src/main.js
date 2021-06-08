@@ -16,12 +16,12 @@ function getKey() {
 }
 
 function setScaledrone(key) {
-return drone = new Scaledrone(key, {
+  
+const drone = new Scaledrone(key, {
   data: {
     name: createRandomNickname(),
   },
 });
-}
 
 const allocatedUsername = drone.args[1].data;
 
@@ -50,3 +50,5 @@ scaledrone.onMessages.receiveMessages(room, allocatedUsername);
 scaledrone.onMembers.trackMembers(room, allocatedUsername);
 
 scaledrone.onError.errorHandling(drone);
+
+}
