@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  functions = "func/"
+  publish = ""
+
+  [dev]
+  framework = "#custom"
+  command = "npm run dev-js && npm start"
+  functions = "func/"
+  publish = ""
+  targetPort = 3000
+
+[[redirects]] 
+  from = "/api/setEnv"
+  to = "/.netlify/functions/setEnv"
+  status = 200

@@ -1,11 +1,27 @@
 import { createRandomNickname } from "./vendors/randomNicknameGenerator";
 import { scaledrone } from "./modules/scaledrone";
 
-const keyID = process.env.CHANNEL_ID;
-
-const drone = new Scaledrone(keyID, {
-  data: createRandomNickname(),
+document.addEventListener("DOMContentLoaded", () => {
+  getKey();
 });
+
+function getKey() {
+  let url = "/api/setEnv";
+  fetch(url)
+    .then((response) => response.json())
+    .then((content) => {
+      setScaledrone(content.keyID);
+    })
+    .catch((error) => console.error(error));
+}
+
+function setScaledrone(key) {
+return drone = new Scaledrone(key, {
+  data: {
+    name: createRandomNickname(),
+  },
+});
+}
 
 const allocatedUsername = drone.args[1].data;
 
