@@ -9,6 +9,11 @@ module.exports = {
   },
   devServer: {
     open: true,
+    watchContentBase: true,
+    onListening: function (server) {
+      const port = server.listeningApp.address().port;
+      console.log('Listening on port:', port);
+    },
   },
   module: {
     rules: [
