@@ -1,10 +1,6 @@
 import { createRandomNickname } from "./vendors/randomNicknameGenerator";
 import { scaledrone } from "./modules/scaledrone";
 
-document.addEventListener("DOMContentLoaded", () => {
-  getKey();
-});
-
 function getKey() {
   let url = "/api/setEnv";
   fetch(url)
@@ -15,8 +11,12 @@ function getKey() {
     .catch((error) => console.error(error));
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  getKey();
+});
+
 function setScaledrone(key) {
-  
+
 const drone = new Scaledrone(key, {
   data: {
     name: createRandomNickname(),
