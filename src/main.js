@@ -1,7 +1,7 @@
 import { createRandomNickname } from "./vendors/randomNicknameGenerator";
 import { scaledrone } from "./modules/scaledrone";
 
-fetch(url)
+fetch("/api/setEnv")
     .then((response) => response.json())
     .then((content) => {
       setScaledrone(content.keyID);
