@@ -2,6 +2,8 @@
 
 This chat application is the final project for Algebra's Frontend developer course using Scaledrone realtime messaging service.
 
+https://smikulec-chat-app.netlify.app/
+
 ## Demo/preview
 
 ![chat-App-Preview.jpg](https://i.postimg.cc/T3B1V3vd/chat-App-Preview.jpg)
@@ -21,6 +23,7 @@ This chat application is the final project for Algebra's Frontend developer cour
 - Display active members and notifications who joined or left the chat room
 - Emoji button and extensive emoji library
 - Autoexpanding input area with a scrollbar in case of a larger text input
+- Pop-up error notifications
 
 ## Setup
 
