@@ -26,8 +26,8 @@ This chat application is the final project for Algebra's Frontend developer cour
 
 1. This application uses a secret key (Channel ID) to connect to Scaledrone, you should provide it manually by creating a .env file (like in .env.example file).
 2. `npm install` - Install all the dependencies listed in package.json
-3. `npm start:dev`- Serve a development server that provides live reloading, build application using webpack in development mode and compiles scss to css files while watching for changes
-4. `npm build`- Build applicaton using Webpack in production mode and compiles scss to css 
+3. `npm run start:dev`- Serve a development server that provides live reloading, build application using webpack in development mode and compiles scss to css files while watching for changes
+4. `npm run build`- Build applicaton using Webpack in production mode and compiles scss to css 
 
 ## License
 
